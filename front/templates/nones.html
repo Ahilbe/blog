@@ -1,0 +1,507 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+        <div class="flex-1 flex justify-between items-center">
+            <a href="#" class="text-xl">Company</a>
+        </div>
+        <div class="items-center justify-center">
+            <div class="group relative cursor-pointer py-2">
+
+                <div class="flex items-center justify-between space-x-5 bg-white px-4">
+                    <a class="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4" onClick="">
+                        {{ stores.title }}
+                    </a>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                        </svg>
+                    </span>
+                </div>
+
+                <div
+                    class="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
+
+                    <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"  href="../templates/jek/new1.html">
+                        Telefon
+                    </a>
+
+                    <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2" href="../templates/jek/new3.html">
+                        Televizor
+                    </a>
+
+                    <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2" href="../templates/jek/new2.html">
+                        Netbook
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <label for="menu-toggle" class="pointer-cursor md:hidden block">
+          <svg class="fill-current text-gray-900"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <title>menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                    <li><a class="md:p-4 py-3 px-0 block" href="/">AboutUs</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block" href="/">Treatments</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block" href="{% url 'login' %}">Login</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="{% url 'signup' %}">SignUp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<div style="display: flex;justify-content: space-around;">
+    <div class="p-4 max-w-md ">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="/static/images/src_340x1912xkatlanabilir-telefon-satislari-serbest-dususte.jpg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Samasung Galaxy Z Flip 4 review</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"  href="bo/">
+                        Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="/static/images/2.jpg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Samasung Galaxy Z Flip 5 256GB Bora</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo2/">
+                        Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="/static/images/samsung galaxy a25.jpg" alt="а">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Samasung Galaxy A25</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo3/">
+                        Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex;justify-content: space-around;">
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="/static/images/HP-Stream-14-Laptop-Intel-Celeron-N4000-4GB-SDRAM-32GB-eMMC-Office-365-1-yr-Royal-Blue_4f941fe6-0cf3-42af-a06c-7532138492fc_2.cb8e85270e731cb1ef85d431e49f0bf2.jpeg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">HP Stream 14 Laptop</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"  href="bo4/">
+                       Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="/static/images/images.jpg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">HP Stream 14-em OOOOny</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"  href="bo5/">
+                       Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 max-w-md">
+    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+        <img class="h-48 w-full object-cover object-center" src="../static/images/How-to-Choose-a-Laptop-August-2023-Gear.webp" alt="blog">
+        <div class="p-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Laptop Buying Guide</h1>
+            <p class="leading-relaxed mb-3">
+                Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                tousled waistcoat.
+            </p>
+            <div class="flex items-center flex-wrap">
+                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo6/">
+                    Описание
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    1.2K
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>6
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div style="display: flex;justify-content: space-around;">
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="../static/images/televizor-mi-tv-p1-32-gl-172938-0.jpeg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Televizor Mi TV P1 32 GL</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo7/">
+                       Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="../static/images/ed05cfb10d7387d104ba37ad59939a55253974bd72e5aa2572337393ff1ab14d_3xMmYq_640l.jpg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Televizor Artel TV 32AH90G</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo8/">
+                        Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-4 max-w-md">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="h-48 w-full object-cover object-center" src="../static/images/dc8dfc44f3dc7c0c94ad7be5ff311a5adf8141dd.jpg" alt="blog">
+            <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Artel 32</h1>
+                <p class="leading-relaxed mb-3">
+                    Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+                    tousled waistcoat.
+                </p>
+                <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="bo9/`">
+                       Описание
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>6
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="sm:col-span-2">
+        <a  aria-label="Go home" title="Company" class="inline-flex items-center">
+          <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+            <rect x="3" y="1" width="7" height="12"></rect>
+            <rect x="3" y="17" width="7" height="6"></rect>
+            <rect x="14" y="1" width="7" height="6"></rect>
+            <rect x="14" y="11" width="7" height="12"></rect>
+          </svg>
+          <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
+        </a>
+        <div class="mt-6 lg:max-w-sm">
+          <p class="text-sm text-gray-800">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+          </p>
+          <p class="mt-4 text-sm text-gray-800">
+            Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+        </div>
+      </div>
+      <div class="space-y-2 text-sm">
+        <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+        <div class="flex">
+          <p class="mr-1 text-gray-800">Phone:</p>
+          <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">850-123-5021</a>
+        </div>
+        <div class="flex">
+          <p class="mr-1 text-gray-800">Email:</p>
+          <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
+        </div>
+        <div class="flex">
+          <p class="mr-1 text-gray-800">Address:</p>
+          <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
+            312 Lovely Street, NY
+          </a>
+        </div>
+      </div>
+      <div>
+        <span class="text-base font-bold tracking-wide text-gray-900">Social</span>
+        <div class="flex items-center mt-1 space-x-3">
+          <a href="https://twitter.com/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+              <path
+                d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+            <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+              <circle cx="15" cy="15" r="4"></circle>
+              <path
+                d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+              ></path>
+            </svg>
+          </a><a href="https://www.facebook.com/TwitterInc" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">
+            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+        <p class="text-sm text-gray-600">
+          © Copyright 2020 Lorem Inc. All rights reserved.
+        </p>
+        <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          <li>
+            <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+          </li>
+          <li>
+            <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+</body>
+</html>
+
